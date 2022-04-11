@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(/resources/images/body-background2.jpg);
+}
+
+.body-container {
+    margin: 90px 15% 0 15%;
+}
+
+
+.grid-container {
+    display: grid;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 5px;
+    min-height: 80vh;
+
+
+    grid-template-areas:
+        'header header header'
+        'itemsList itemsList itemsList'
+        '. addNew .'
+        'footer footer footer';
+
+    grid-row-gap: 25px;
+
+
+    .header {
+        grid-area: header;
+        font-family: 'Grape Nuts';
+        background-color: #f1f1f1;
+        padding: 30px;
+        text-align: center;
+        font-size: 55px;
+        font-weight: bold;
+    }
+
+    .list {
+        grid-area: itemsList;
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px;
+            border-radius: 10px;
+            border: 1px solid;
+            color: #ffffff;
+            margin: 5px 25px;
+
+            &.color1 {
+                @color1: #fca90f;
+                background-color: @color1;
+                &:hover {
+                    background-color: lighten(@color1, 10%);
+                }
+            }
+            &.color2 {
+                @color1: #ff3815;
+                background-color: @color1;
+                &:hover {
+                    background-color: lighten(@color1, 10%);
+                }
+            }
+            &.color3 {
+                @color1: #5416ff;
+                background-color: @color1;
+                &:hover {
+                    background-color: lighten(@color1, 10%);
+                }
+            }
+        }
+
+
+
+
+    }
+
+    .add-items {
+        grid-area: addNew;
+        border: 1px solid rgb(205, 205, 205);
+    }
+
+
+
+
+
+    // .left {
+    //     grid-area: left;
+    // }
+
+    // .middle {
+    //     grid-area: middle;
+    //     background-color: #bbb;
+    // }
+
+
+    // .footer {
+    //     grid-area: footer;
+    //     background-color: #d5ffa4;
+    //     padding: 10px;
+    //     text-align: center;
+    // }
+
+}
+
+
+// @media (max-width: 750px) {
+//     .grid-container {
+//         grid-template-areas:
+//             'header'
+//             'left'
+//             'middle'
+//             'right'
+//             'footer';
+
+//         .left,
+//         .middle,
+//         .right {
+//             background-color: #d4c5fd;
+//         }
+//     }
+
+// }

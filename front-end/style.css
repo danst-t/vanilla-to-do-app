@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(/resources/images/body-background2.jpg);
+}
+.body-container {
+  margin: 90px 15% 0 15%;
+}
+.grid-container {
+  display: grid;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 5px;
+  min-height: 80vh;
+  grid-template-areas: 'header header header' 'itemsList itemsList itemsList' '. addNew .' 'footer footer footer';
+  grid-row-gap: 25px;
+}
+.grid-container .header {
+  grid-area: header;
+  font-family: 'Grape Nuts';
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+  font-size: 55px;
+  font-weight: bold;
+}
+.grid-container .list {
+  grid-area: itemsList;
+}
+.grid-container .list .list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 1px solid;
+  color: #ffffff;
+  margin: 5px 25px;
+}
+.grid-container .list .list-item.color1 {
+  background-color: #fca90f;
+}
+.grid-container .list .list-item.color1:hover {
+  background-color: #fdbb41;
+}
+.grid-container .list .list-item.color2 {
+  background-color: #ff3815;
+}
+.grid-container .list .list-item.color2:hover {
+  background-color: #ff6348;
+}
+.grid-container .list .list-item.color3 {
+  background-color: #5416ff;
+}
+.grid-container .list .list-item.color3:hover {
+  background-color: #7949ff;
+}
+.grid-container .add-items {
+  grid-area: addNew;
+  border: 1px solid #cdcdcd;
+}

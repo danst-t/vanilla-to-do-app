@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript" src="/storage.js"></script>
+    <!-- <script type="text/javascript" src="/logic.js"></script> -->
+
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Grape Nuts' rel='stylesheet'>
+    <script type="text/javascript" src="/resources/live.js"></script>
+    <!-- <link rel="stylesheet" href="style.less"> -->
+    <!-- <link rel="stylesheet" href="style.less"> -->
+
+</head>
+
+<body onload="onPageLoad()">
+
+    <div class="body-container">
+
+        <div class="grid-container">
+
+            <header class="header">
+                <span>To do LIST</span>
+            </header>
+
+            <div id="list" class="list">
+
+                <!-- <div class="list-item color1">
+                    <div class="item-info">
+                        <div class="item-hour"> 9:35 AM</div>
+                        <div class="item-desc"> Do this in time</div>
+                    </div>
+                    <div class="item-check">
+                        <input type="checkbox" onchange="checkItem()">
+                    </div>
+                </div> -->
+
+            </div>
+
+
+            <div id="add-items" class="add-items">
+                <div class="add-items-container">
+                    <div><span>Add new item to list</span></div>
+                    <div>
+                        <span>Description</span>
+                        <input id="new-item-desc" type="text" />
+                    </div>
+                    <div>
+                        <span>Time</span>
+                        <input type="time" id="new-item-time">
+                    </div>
+                    <div>
+                        <button onclick="addNewItemToList()"> Create new </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+<script type="text/javascript" src="/logic.js"></script>
+
+</html>
